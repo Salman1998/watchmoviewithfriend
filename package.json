@@ -1,0 +1,26 @@
+{
+  "name": "watch-together-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WebSocket signaling server for Watch Together (rooms, presence, chat, WebRTC signaling). Never touches media.",
+  "type": "module",
+  "main": "dist/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.18.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0"
+  }
+}
